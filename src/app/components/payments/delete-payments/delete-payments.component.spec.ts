@@ -19,7 +19,7 @@ describe('DeletePaymentsComponent', () => {
   // let httpClient: HttpClient;
   // let httpTestingController: HttpTestingController;
   let matSnackBar: jasmine.SpyObj<MatSnackBar>;
-  const paymentService: jasmine.SpyObj<PaymentService>;
+  const paymentService: jasmine.SpyObj<PaymentService> = jasmine.createSpyObj('PaymentService', ['deletePayment', 'getPaymentById']);
   let matDialog: jasmine.SpyObj<MatDialog>;
 
   const matDialogDataDummy: Task = {
@@ -45,8 +45,8 @@ describe('DeletePaymentsComponent', () => {
         { provide: MAT_DIALOG_DATA, useValue: {matDialogDataDummy} },
         { provide: MatDialogRef, useValue: {} },
         {
-          provide: paymentService,
-          useValue: jasmine.createSpyObj(['deletePayment']),
+          provide: PaymentService,
+          useValue: paymentService,
         }
       ],
     }).compileComponents();
