@@ -19,7 +19,7 @@ describe('DeletePaymentsComponent', () => {
   // let httpClient: HttpClient;
   // let httpTestingController: HttpTestingController;
   let matSnackBar: jasmine.SpyObj<MatSnackBar>;
-  let paymentService: jasmine.SpyObj<PaymentService>;
+  const paymentService: jasmine.SpyObj<PaymentService>;
   let matDialog: jasmine.SpyObj<MatDialog>;
 
   const matDialogDataDummy: Task = {

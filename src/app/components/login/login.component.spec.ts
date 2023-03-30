@@ -25,7 +25,7 @@ describe('LoginComponent', () => {
   let fixture: ComponentFixture<LoginComponent>;
   let authService: jasmine.SpyObj<AuthService>;
   let snackbarSpy: jasmine.Spy;
-  let routerSpy = {navigate: jasmine.createSpy('navigate')};
+  const routerSpy = {navigate: jasmine.createSpy('navigate')};
 
   const formBuilder: FormBuilder = new FormBuilder();
 
