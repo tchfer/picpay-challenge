@@ -1,0 +1,48 @@
+<div class="login-wrapper">
+  <div class="login">
+    <div class="logo">
+      <img src="./../../../assets/images/Logo.png" alt="" />
+    </div>
+    <div class="login-header">
+      <h1>Bem vindo de volta</h1>
+    </div>
+    <div class="login-body">
+      <div class="form">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input
+              #userNameInput
+              matInput
+              placeholder="Email"
+              type="email"
+              placeholder="Insira seu melhor email"
+              formControlName="email"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              placeholder="Senha"
+              [type]="hide ? 'password' : 'text'"
+              formControlName="password"
+              required
+            />
+            <mat-icon matSuffix (click)="hide = !hide">{{
+              hide ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </mat-form-field>
+          <button mat-flat-button [disabled]="loginForm.invalid">ENTRAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="background-image">
+    <img
+      src="./../../../assets/images/man-doing-online-payment 1.svg"
+      alt="A man doing online payments"
+    />
+  </div>
+</div>
