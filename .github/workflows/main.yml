@@ -33,4 +33,4 @@ jobs:
         with:
           target_branch: gh-pages
           build_dir: dist/picpay-desafio-frontend
-          GH_PAT: ${{ secrets.GH_PAGES_TOKEN }}
+          token: ${{ secrets.GH_PAGES_TOKEN }}
