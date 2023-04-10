@@ -32,4 +32,4 @@ jobs:
         with:
           target_branch: gh-pages
           build_dir: dist/picpay-desafio-frontend
-          github_token: ${{ secrets.picpay-challenge }}
+          token: ${{ secrets.GH_PAGES_TOKEN }}
